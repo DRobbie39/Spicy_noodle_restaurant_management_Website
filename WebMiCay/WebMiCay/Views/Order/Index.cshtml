@@ -1,0 +1,439 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/Library/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="~/Library/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <section class="hero">
+        <!-- Banner Begin -->
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="
+                padding-left: 0px;
+                padding-right: 5px;">
+                        <div class="banner__pic">
+                            <img src="~/Library/img/banner/banner-3.jpg" alt="" style="border-radius:0">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="
+                padding-left: 5px;
+                padding-right: 0px;">
+                        <div class="banner__pic">
+                            <img src="~/Library/img/banner/banner-4.jpg" alt="" style="border-radius:0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Tất cả thực đơn</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Mì cay</a></li>
+                            <li><a href="#">Lẩu</a></li>
+                            <li><a href="#">Trái cây & hạt</a></li>
+                            <li><a href="#">Đồ chiên</a></li>
+                            <li><a href="#">Đồ biển</a></li>
+                            <li><a href="#">Bơ & trứng</a></li>
+                            <li><a href="#">Thức ăn nhanh</a></li>
+                            <li><a href="#">Hành tươi</a></li>
+                            <li><a href="#">Ngô</a></li>
+                            <li><a href="#">Yến mạch</a></li>
+                            <li><a href="#">Cơm trộn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    Tất cả danh mục
+                                    <span class="fa fa-sort-down"></span>
+                                </div>
+                                <input type="text" placeholder="Bạn cần gì?">
+                                <button type="submit" class="site-btn">TÌM KIẾM</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>+84329903471</h5>
+                                <span>thời gian hỗ trợ 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="featured spad">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-title">
+                                        <h2>Sản phẩm nổi bật</h2>
+                                    </div>
+                                    <div class="featured__controls">
+                                        <ul>
+                                            <li class="active" data-filter="*">Tất cả</li>
+                                            <li data-filter=".oranges">Mì cay</li>
+                                            <li data-filter=".fresh-meat">Đồ chiên</li>
+                                            <li data-filter=".vegetables">Lẩu</li>
+                                            <li data-filter=".fastfood">Cơm cuộn rong biển</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row featured__filter">
+                                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                    <div class="featured__item">
+                                        <div class="featured__item__pic set-bg" data-setbg = "~/Library/img/categories/cat-1.jpg"><img src="~/Library/img/categories/cat-1.jpg" alt="" />
+                                            <ul class="featured__item__pic__hover">
+                                               
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="featured__item__text">
+                                            <h6><a href="#">Phô Mai Que</a></h6>
+                                            <h5 style="font-weight: bold; " >30.000VNĐ</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="~/Library/img/categories/cat-1.jpg"><img src="~/Library/img/categories/cat-1.jpg" alt="" />
+                            <h5><a href="#">Trái cây tươi</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="~/Library/img/categories/cat-2.jpg"><img src="~/Library/img/categories/cat-2.jpg" alt="" />
+                            <h5><a href="#">Trái cây sấy khô</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="~/Library/img/categories/cat-3.jpg"><img src="~/Library/img/categories/cat-3.jpg" alt="" />
+                            <h5><a href="#">Rau củ</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="~/Library/img/categories/cat-4.jpg"><img src="~/Library/img/categories/cat-4.jpg" alt="" />
+                            <h5><a href="#">Nước ép trái cây</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="~/Library/img/categories/cat-5.jpg"><img src="~/Library/img/categories/cat-5.jpg" alt="" />
+                            <h5><a href="#">Thức uống trái cây</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+    <!-- Latest Product Section Begin -->
+    <section class="latest-product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Sản phẩm mới nhất</h4>
+                        <div class="latest-product__slider owl-carousel">
+                            <div class="latest-prdouct__slider__item">
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-1.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Lẩu Hải Sản</h6>
+                                        <span>34.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-2.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Lẩu Hải Sản</h6>
+                                        <span>34.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-3.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Lẩu Hải Sản</h6>
+                                        <span>34.000VNĐ</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="latest-prdouct__slider__item">
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-1.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Lẩu Hải Sản</h6>
+                                        <span>67.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-2.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Mì Cay Hải Sản</h6>
+                                        <span>67.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-3.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Mì Cay Hải Sản</h6>
+                                        <span>67.000VNĐ</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Sản phẩm được đánh giá cao nhất</h4>
+                        <div class="latest-product__slider owl-carousel">
+                            <div class="latest-prdouct__slider__item">
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-1.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Mì Cay Hải Sản</h6>
+                                        <span>67.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-2.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Mì Cay Hải Sản</h6>
+                                        <span>67.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-3.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Kim Bắp</h6>
+                                        <span>85.000VNĐ</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="latest-prdouct__slider__item">
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-1.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Kim Bắp</h6>
+                                        <span>85.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-2.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Kim Bắp</h6>
+                                        <span>85.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-3.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Kim Bắp</h6>
+                                        <span>85.000VNĐ</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Đánh giá sản phẩm</h4>
+                        <div class="latest-product__slider owl-carousel">
+                            <div class="latest-prdouct__slider__item">
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-1.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Cá Viên Chiên</h6>
+                                        <span>70.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-2.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Cá Viên Chiên</h6>
+                                        <span>70.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-3.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Cá Viên Chiên</h6>
+                                        <span>70.000VNĐ</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="latest-prdouct__slider__item">
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-1.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Cá Viên Chiên</h6>
+                                        <span>70.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-2.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Mì Cay Thập Cẩm</h6>
+                                        <span>50.000VNĐ</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="~/Library/img/latest-product/lp-3.jpg" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>Mì Cay Thập Cẩm</h6>
+                                        <span>50.000VNĐ</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Product Section End -->
+    <!-- Blog Section Begin -->
+    <section class="from-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title from-blog__title">
+                        <h2>Từ các Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/Library/img/blog/blog-1.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">Mẹo nấu ăn giúp việc nấu ăn trở nên dễ dàng</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/Library/img/blog/blog-2.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">6 cách chuẩn bị bữa sáng cho 30 ngày</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/Library/img/blog/blog-3.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">Tham quan trang trại sach ở US</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+    <!-- Js Plugins -->
+    <script src="~/Library/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Library/js/bootstrap.min.js"></script>
+    <script src="~/Library/js/jquery.nice-select.min.js"></script>
+    <script src="~/Library/js/jquery-ui.min.js"></script>
+    <script src="~/Library/js/jquery.slicknav.js"></script>
+    <script src="~/Library/js/mixitup.min.js"></script>
+    <script src="~/Library/js/owl.carousel.min.js"></script>
+    <script src="~/Library/js/main.js"></script>
+</body>
+    <!-- Blog Section End -->
+    <!-- Js Plugins -->
+   
+
+

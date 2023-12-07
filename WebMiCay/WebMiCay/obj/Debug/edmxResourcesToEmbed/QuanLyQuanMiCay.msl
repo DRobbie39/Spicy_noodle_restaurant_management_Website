@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyQuanMiCayModelStoreContainer" CdmEntityContainer="QuanLyQuanMiCayEntities">
+    <EntitySetMapping Name="KhachHang">
+      <EntityTypeMapping TypeName="QuanLyQuanMiCayModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoanKhach">
+      <EntityTypeMapping TypeName="QuanLyQuanMiCayModel.TaiKhoanKhach">
+        <MappingFragment StoreEntitySet="TaiKhoanKhach">
+          <ScalarProperty Name="MaTaiKhoanKhach" ColumnName="MaTaiKhoanKhach" />
+          <ScalarProperty Name="TenTaiKhoanKhach" ColumnName="TenTaiKhoanKhach" />
+          <ScalarProperty Name="MatKhauKhach" ColumnName="MatKhauKhach" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="SoLanDatMon" ColumnName="SoLanDatMon" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_InsertKhachHang" FunctionName="QuanLyQuanMiCayModel.Store.sp_InsertKhachHang" />
+    <EntitySetMapping Name="NhanVien">
+      <EntityTypeMapping TypeName="QuanLyQuanMiCayModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDTNV" ColumnName="SDTNV" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoanNhanVien">
+      <EntityTypeMapping TypeName="QuanLyQuanMiCayModel.TaiKhoanNhanVien">
+        <MappingFragment StoreEntitySet="TaiKhoanNhanVien">
+          <ScalarProperty Name="MaVaiTro" ColumnName="MaVaiTro" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TenTaiKhoanNV" ColumnName="TenTaiKhoanNV" />
+          <ScalarProperty Name="MaTaiKhoanNV" ColumnName="MaTaiKhoanNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VaiTro">
+      <EntityTypeMapping TypeName="QuanLyQuanMiCayModel.VaiTro">
+        <MappingFragment StoreEntitySet="VaiTro">
+          <ScalarProperty Name="TenVaiTro" ColumnName="TenVaiTro" />
+          <ScalarProperty Name="MaVaiTro" ColumnName="MaVaiTro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_InsertNhanVien" FunctionName="QuanLyQuanMiCayModel.Store.sp_InsertNhanVien" />
+  </EntityContainerMapping>
+</Mapping>

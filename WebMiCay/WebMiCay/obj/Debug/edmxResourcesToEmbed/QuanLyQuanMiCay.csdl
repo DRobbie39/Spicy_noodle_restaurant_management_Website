@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyQuanMiCayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaiKhoanKhach" Relationship="Self.FK_TaiKhoanKhach_KhachHang" FromRole="KhachHang" ToRole="TaiKhoanKhach" />
+  </EntityType>
+  <EntityType Name="TaiKhoanKhach">
+    <Key>
+      <PropertyRef Name="MaTaiKhoanKhach" />
+    </Key>
+    <Property Name="MaTaiKhoanKhach" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTaiKhoanKhach" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MatKhauKhach" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="SoLanDatMon" Type="Int32" />
+    <Property Name="MaKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_TaiKhoanKhach_KhachHang" FromRole="TaiKhoanKhach" ToRole="KhachHang" />
+  </EntityType>
+  <Association Name="FK_TaiKhoanKhach_KhachHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaiKhoanKhach" Type="Self.TaiKhoanKhach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="TaiKhoanKhach">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyQuanMiCayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" />
+    <EntitySet Name="TaiKhoanKhach" EntityType="Self.TaiKhoanKhach" />
+    <AssociationSet Name="FK_TaiKhoanKhach_KhachHang" Association="Self.FK_TaiKhoanKhach_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="TaiKhoanKhach" EntitySet="TaiKhoanKhach" />
+    </AssociationSet>
+    <FunctionImport Name="sp_InsertKhachHang">
+      <Parameter Name="TenKH" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+      <Parameter Name="GioiTinh" Mode="In" Type="String" />
+      <Parameter Name="TenTaiKhoanKhach" Mode="In" Type="String" />
+      <Parameter Name="MatKhauKhach" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="NhanVien" EntityType="QuanLyQuanMiCayModel.NhanVien" />
+    <EntitySet Name="TaiKhoanNhanVien" EntityType="QuanLyQuanMiCayModel.TaiKhoanNhanVien" />
+    <EntitySet Name="VaiTro" EntityType="QuanLyQuanMiCayModel.VaiTro" />
+    <AssociationSet Name="FK_TaiKhoanNhanVien_NhanVien" Association="QuanLyQuanMiCayModel.FK_TaiKhoanNhanVien_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="TaiKhoanNhanVien" EntitySet="TaiKhoanNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaiKhoanNhanVien_VaiTro" Association="QuanLyQuanMiCayModel.FK_TaiKhoanNhanVien_VaiTro">
+      <End Role="VaiTro" EntitySet="VaiTro" />
+      <End Role="TaiKhoanNhanVien" EntitySet="TaiKhoanNhanVien" />
+    </AssociationSet>
+    <FunctionImport Name="sp_InsertNhanVien">
+      <Parameter Name="TenNV" Mode="In" Type="String" />
+      <Parameter Name="SDTNV" Mode="In" Type="String" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+      <Parameter Name="GioiTinh" Mode="In" Type="String" />
+      <Parameter Name="TenTaiKhoanNV" Mode="In" Type="String" />
+      <Parameter Name="MatKhau" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TenNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SDTNV" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaiKhoanNhanVien" Relationship="QuanLyQuanMiCayModel.FK_TaiKhoanNhanVien_NhanVien" FromRole="NhanVien" ToRole="TaiKhoanNhanVien" />
+  </EntityType>
+  <EntityType Name="TaiKhoanNhanVien">
+    <Key>
+      <PropertyRef Name="MaTaiKhoanNV" />
+    </Key>
+    <Property Name="MaTaiKhoanNV" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TenTaiKhoanNV" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MaNV" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaVaiTro" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhanVien" Relationship="QuanLyQuanMiCayModel.FK_TaiKhoanNhanVien_NhanVien" FromRole="TaiKhoanNhanVien" ToRole="NhanVien" />
+    <NavigationProperty Name="VaiTro" Relationship="QuanLyQuanMiCayModel.FK_TaiKhoanNhanVien_VaiTro" FromRole="TaiKhoanNhanVien" ToRole="VaiTro" />
+  </EntityType>
+  <EntityType Name="VaiTro">
+    <Key>
+      <PropertyRef Name="MaVaiTro" />
+    </Key>
+    <Property Name="MaVaiTro" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="TenVaiTro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaiKhoanNhanVien" Relationship="QuanLyQuanMiCayModel.FK_TaiKhoanNhanVien_VaiTro" FromRole="VaiTro" ToRole="TaiKhoanNhanVien" />
+  </EntityType>
+  <Association Name="FK_TaiKhoanNhanVien_NhanVien">
+    <End Type="QuanLyQuanMiCayModel.NhanVien" Role="NhanVien" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="QuanLyQuanMiCayModel.TaiKhoanNhanVien" Role="TaiKhoanNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="TaiKhoanNhanVien">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaiKhoanNhanVien_VaiTro">
+    <End Type="QuanLyQuanMiCayModel.VaiTro" Role="VaiTro" Multiplicity="1" />
+    <End Type="QuanLyQuanMiCayModel.TaiKhoanNhanVien" Role="TaiKhoanNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VaiTro">
+        <PropertyRef Name="MaVaiTro" />
+      </Principal>
+      <Dependent Role="TaiKhoanNhanVien">
+        <PropertyRef Name="MaVaiTro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
