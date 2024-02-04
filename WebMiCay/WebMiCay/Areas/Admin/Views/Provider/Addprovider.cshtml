@@ -1,0 +1,164 @@
+﻿@model WebMiCay.Areas.Admin.Models.ProviderViewModel
+@{
+    ViewBag.Title = "Addprovider";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+link rel="canonical"
+      href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+<link href="~/Areas/Admin/Assets/Client/css/style.min.css" rel="stylesheet" />
+<body>
+    <div class="page-wrapper">
+        <div class="col-lg-8 col-xlg-9 col-md-12" style="margin-left:30px">
+            <h3 class="hide-menu">Thêm Nhà Cung Cấp</h3>
+            <div class="card">
+                <div class="card-body">
+                    <form class="form-horizontal form-material" method="post">
+                        <div class="form-group mb-4">
+                            <label for="example-email" class="col-md-12 p-0">Tên nhà cung cấp</label>
+                            <div class="col-md-12 border-bottom p-0">
+                                <input type="text"
+                                       placeholder="Nhập tên nhà cung cấp..."
+                                       class="form-control p-0 border-0"
+                                       name="TenNCC" />
+                                <div class="alert alert-danger hidden" style="display: none;">
+                                    Không được để trống!
+                                </div>
+                                @if (!String.IsNullOrEmpty(ViewBag.ErrorMessage))
+                                {
+                                    <div class="alert alert-danger">
+                                        @ViewBag.ErrorMessage
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="col-md-12 p-0">Địa chỉ nhà cung cấp</label>
+                            <div class="col-md-12 border-bottom p-0">
+                                <input type="text"
+                                       placeholder="Nhập địa chỉ nhà cung cấp..."
+                                       class="form-control p-0 border-0"
+                                       name="DiaChiNCC" />
+                                <div class="alert alert-danger hidden" style="display: none;">
+                                    Không được để trống!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group mb-4 col-xl-6">
+                                <label class="col-md-12 p-0">Số điện thoại nhà cung cấp</label>
+                                <div class="col-md-12 border-bottom p-0">
+                                    <input type="text"
+                                           placeholder="Nhập số điện thoại nhà cung cấp..."
+                                           class="form-control p-0 border-0"
+                                           name="SDTNCC" />
+                                    <div class="alert alert-danger hidden" style="display: none;">
+                                        Không được để trống!
+                                    </div>
+                                    <div class="alert alert-danger hidden" style="display: none;">
+                                        Phải có 10 số!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <div class="col-sm-12">
+                                <button class="btn btn-success">Thêm nhà cung cấp</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Areas/Admin/Assets/Client/js/jquery.min.js"></script>
+    <script src="~/Areas/Admin/Assets/Client/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Areas/Admin/Assets/Client/js/app-style-switcher.js"></script>
+    <script src="~/Areas/Admin/Assets/Client/js/waves.js"></script>
+    <script src="~/Areas/Admin/Assets/Client/js/custom.js"></script>
+    <script src="~/Areas/Admin/Assets/Client/js/sidebarmenu.js"></script>
+    <script>
+        (function ($) {
+            "use strict";
+            $(function () {
+                $(".file-upload-browse").on("click", function () {
+                    var file = $(this)
+                        .parent()
+                        .parent()
+                        .parent()
+                        .find(".file-upload-default");
+                    file.trigger("click");
+                });
+                $(".file-upload-default").on("change", function () {
+                    $(this)
+                        .parent()
+                        .find(".form-control")
+                        .val(
+                            $(this)
+                                .val()
+                                .replace(/C:\\fakepath\\/i, "")
+                        );
+                });
+            });
+        })(jQuery);
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-success').click(function (e) {
+                var isValid = true;
+                // Xử lý bỏ trống không nhập hay chọn gì
+                $('input[type="text"]').each(function () {
+                    if ($.trim($(this).val()) == '') {
+                        isValid = false;
+                        $(this).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        });
+                        $(this).siblings('.alert').show();
+                    }
+                    else {
+                        $(this).css({
+                            "border": "",
+                            "background": ""
+                        });
+                        $(this).siblings('.alert').hide();
+                    }
+                });
+
+                // Xử lý SĐT không đủ 10 số và bỏ trống
+                var phoneValue = $('input[name="SDTNCC"]').val();
+                if (phoneValue == '') {
+                    isValid = false;
+                    $('input[name="SDTNCC"]').css({
+                        "border": "1px solid red",
+                        "background": "#FFCECE"
+                    });
+                    $('input[name="SDTNCC"]').siblings('.alert').first().show();
+                    $('input[name="SDTNCC"]').siblings('.alert').last().hide();
+                } else if (phoneValue.length < 10 || phoneValue.length > 10) {
+                    isValid = false;
+                    $('input[name="SDTNCC"]').css({
+                        "border": "1px solid red",
+                        "background": "#FFCECE"
+                    });
+                    $('input[name="SDTNCC"]').siblings('.alert').first().hide();
+                    $('input[name="SDTNCC"]').siblings('.alert').last().show();
+                } else {
+                    $('input[name="SDTNCC"]').css({
+                        "border": "",
+                        "background": ""
+                    });
+                    $('input[name="SDTNCC"]').siblings('.alert').hide();
+                }
+
+                if (isValid == false) {
+                    e.preventDefault();
+                } else {
+                    alert('Cập nhật thành công!, hãy kiểm tra lại các trường thông tin xem còn có lỗi nào không trước khi thoát');
+                }
+            });
+        });
+    </script>
+</body>
