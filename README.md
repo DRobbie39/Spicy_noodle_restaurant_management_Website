@@ -2,7 +2,7 @@
 
 * Thông tin nhóm:
 
-    * Phan Gia Đạt (Front End + Back End)
-    * Phạm Đình Minh Trí (Front End + Back End)
-    * Trần Phương Loan (Front End)
-    * Lê Trung Quyền (Front End + Back End)
+    * Phan Gia Đạt (Front End + Back End) (40%)
+    * Phạm Đình Minh Trí (Front End + Back End) (10%)
+    * Trần Phương Loan (Front End) (10%)
+    * Lê Trung Quyền (Front End + Back End) (40%)
