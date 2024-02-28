@@ -1,4 +1,4 @@
-# Website quản lý quán mì cay bằng mô hình MVC kết hợp với C#
+# Website quản lý quán mì cay (ASP .NET MVC, C#, SQL Server)
 
 * Thông tin nhóm:
 
