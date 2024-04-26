@@ -139,6 +139,15 @@
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_TaiKhoanNhanVien_NhanVien" FromRole="TaiKhoanNhanVien" ToRole="NhanVien" />
     <NavigationProperty Name="VaiTro" Relationship="Self.FK_TaiKhoanNhanVien_VaiTro" FromRole="TaiKhoanNhanVien" ToRole="VaiTro" />
   </EntityType>
+  <EntityType Name="TongDoanhThuTheoThang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Thang" Type="Int32" />
+    <Property Name="Nam" Type="Int32" />
+    <Property Name="TongDoanhThu" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
   <EntityType Name="VaiTro">
     <Key>
       <PropertyRef Name="MaVaiTro" />
@@ -298,6 +307,7 @@
     <EntitySet Name="PhanHoi" EntityType="Self.PhanHoi" />
     <EntitySet Name="TaiKhoanKhach" EntityType="Self.TaiKhoanKhach" />
     <EntitySet Name="TaiKhoanNhanVien" EntityType="Self.TaiKhoanNhanVien" />
+    <EntitySet Name="TongDoanhThuTheoThang" EntityType="Self.TongDoanhThuTheoThang" />
     <EntitySet Name="VaiTro" EntityType="Self.VaiTro" />
     <AssociationSet Name="FK_CTHD_HoaDon" Association="Self.FK_CTHD_HoaDon">
       <End Role="HoaDon" EntitySet="HoaDon" />
@@ -391,26 +401,5 @@
       <Parameter Name="NoiDungPhanHoi" Mode="In" Type="String" />
       <Parameter Name="MaKH" Mode="In" Type="String" />
     </FunctionImport>
-    <EntitySet Name="sysdiagrams" EntityType="QuanLyQuanMiCayModel.sysdiagrams" />
-    <EntitySet Name="TongDoanhThuTheoThang" EntityType="QuanLyQuanMiCayModel.TongDoanhThuTheoThang" />
   </EntityContainer>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="TongDoanhThuTheoThang">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Thang" Type="Int32" />
-    <Property Name="Nam" Type="Int32" />
-    <Property Name="TongDoanhThu" Type="Decimal" Precision="10" Scale="2" />
-  </EntityType>
 </Schema>

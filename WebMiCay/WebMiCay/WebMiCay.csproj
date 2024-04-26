@@ -209,9 +209,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyQuanMiCay.edmx</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>QuanLyQuanMiCay.tt</DependentUpon>
-    </Compile>
     <Compile Include="TaiKhoanKhach.cs">
       <DependentUpon>QuanLyQuanMiCay.tt</DependentUpon>
     </Compile>
@@ -1047,6 +1044,7 @@
     <Content Include="Areas\Admin\Views\Provider\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Provider\Addprovider.cshtml" />
     <Content Include="Areas\Admin\Views\Provider\Updateprovider.cshtml" />
+    <Content Include="Areas\Admin\Views\Bill\ChitietHD.cshtml" />
     <EntityDeploy Include="QuanLyQuanMiCay.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuanLyQuanMiCay.Designer.cs</LastGenOutput>
@@ -1054,7 +1052,6 @@
     <Content Include="QuanLyQuanMiCay.edmx.diagram">
       <DependentUpon>QuanLyQuanMiCay.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\Bill\ChitietHD.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -39,9 +39,8 @@ namespace WebMiCay
         public virtual DbSet<PhanHoi> PhanHoi { get; set; }
         public virtual DbSet<TaiKhoanKhach> TaiKhoanKhach { get; set; }
         public virtual DbSet<TaiKhoanNhanVien> TaiKhoanNhanVien { get; set; }
-        public virtual DbSet<VaiTro> VaiTro { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TongDoanhThuTheoThang> TongDoanhThuTheoThang { get; set; }
+        public virtual DbSet<VaiTro> VaiTro { get; set; }
     
         public virtual int sp_InsertKhachHang(string tenKH, string sDT, Nullable<System.DateTime> ngaySinh, string diaChi, string gioiTinh, string tenTaiKhoanKhach, string matKhauKhach)
         {

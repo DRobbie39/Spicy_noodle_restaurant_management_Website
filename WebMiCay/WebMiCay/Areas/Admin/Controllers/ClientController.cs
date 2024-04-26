@@ -137,6 +137,18 @@ namespace WebMiCay.Areas.Admin.Controllers
         {
             var cm = db.KhachHang.SingleOrDefault(c => c.MaKH == maKhach);
 
+            // Tìm tất cả các HoaDon liên quan đến KhachHang này
+            var relatedHoaDon = db.HoaDon.Where(hd => hd.MaKH == maKhach);
+
+            // Xóa tất cả các HoaDon liên quan
+            db.HoaDon.RemoveRange(relatedHoaDon);
+
+            // Tìm tất cả các LichDat liên quan đến KhachHang này
+            var relatedLichDat = db.LichDat.Where(ld => ld.MaKH == maKhach);
+
+            // Xóa tất cả các LichDat liên quan
+            db.LichDat.RemoveRange(relatedLichDat);
+
             db.KhachHang.Remove(cm);
             db.SaveChanges();
 

@@ -231,6 +231,8 @@ insert into Mon values ('M04', N'Mì cay kim chi hải sản', 67000, 'product-4
 insert into Mon values ('M05', N'Mì cay kim chi cá', 31000, 'product-5.jpg', 'LM5')
 insert into Mon values ('M06', N'Mì tương đen bò Mỹ', 40000, 'product-6.jpg', 'LM6')
 
+delete from Mon
+
 --CHTD
 insert into CTHD values ('HD1', 'M01', 2)
 insert into CTHD values ('HD2', 'M05', 6)
@@ -294,7 +296,7 @@ EXEC sp_InsertKhachHang N'Lê Thị Như Ái', '0123453339', '1996-05-26', 'TP H
 EXEC sp_InsertKhachHang N'Trần Hoàng Minh', '0123111339', '1992-05-26', 'TP Ho Chi Minh', 'Nam', 'loan2', '1'
 EXEC sp_InsertKhachHang 'Nguyen Van A', '0123456789', '2000-01-01', 'TP Ho Chi Minh', 'Nam', 'da2t', '1'
 
-DELETE FROM TaiKhoanKhach WHERE MaTaiKhoanKhach = 'TKK01'
+DELETE FROM TaiKhoanKhach WHERE MaTaiKhoanKhach = 'TKK06'
 DELETE FROM KhachHang WHERE MaKH = 'KH06'
 
 SELECT * FROM KhachHang
@@ -393,6 +395,7 @@ BEGIN
 END;
 
 delete from PhanHoi
+
 -- Tự động sinh khóa cho bảng Mon
 CREATE OR ALTER PROC sp_InsertMon
     @TenMon NVARCHAR(255),
