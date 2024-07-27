@@ -2,16 +2,16 @@
 
 * Thông tin nhóm:
 
-    * Phan Gia Đạt (Front End + Back End) (40%)
-    * Phạm Đình Minh Trí (Front End + Back End) (10%)
-    * Trần Phương Loan (Front End) (10%)
-    * Lê Trung Quyền (Front End + Back End) (40%)
+    * Phan Gia Đạt (Front End + Back End)
+    * Phạm Đình Minh Trí (Front End + Back End)
+    * Trần Phương Loan (Front End)
+    * Lê Trung Quyền (Front End + Back End)
 
 # Spicy noodle shop management website (ASP .NET MVC, C#, SQL Server)
 
 * Group information:
 
-   * Phan Gia Dat (Front End + Back End) (40%)
-   * Pham Dinh Minh Tri (Front End + Back End) (10%)
-   * Tran Phuong Loan (Front End) (10%)
-   * Le Trung Quyen (Front End + Back End) (40%)
+   * Phan Gia Dat (Front End + Back End)
+   * Pham Dinh Minh Tri (Front End + Back End)
+   * Tran Phuong Loan (Front End)
+   * Le Trung Quyen (Front End + Back End)
