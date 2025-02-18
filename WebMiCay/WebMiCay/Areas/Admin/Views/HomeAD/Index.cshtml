@@ -49,7 +49,7 @@
                         </div>
                         <div class="ml-auto mt-md-3 mt-lg-0">
                             <span class="opacity-7 text-muted">
-                                <sup class="set-doller">VNĐ</sup>
+                                <sup class="set-doller">đ</sup>
                             </span>
                         </div>
                     </div>
@@ -222,21 +222,6 @@
         });
     }
 
-    // Tính doanh thu tháng
-    // Chuyển dữ liệu từ C# sang JavaScript
-    var doanhThuData = @Html.Raw(Json.Encode(ViewBag.DoanhThuData));
-
-    // Tìm tháng hiện tại
-    var date = new Date();
-    var currentMonth = date.getMonth() + 1; // JavaScript months are 0-based
-
-    // Tìm doanh thu của tháng hiện tại
-    var currentMonthData = doanhThuData.find(item => item.Thang === currentMonth);
-    var currentMonthRevenue = currentMonthData ? currentMonthData.DoanhThu : 0;
-
-    // Cập nhật giao diện với dữ liệu mới
-    $(".text-dark.mb-1").text(currentMonthRevenue);
-
     // Gọi hàm này sau khi thêm hoặc xóa tài khoản nhân viên
     updateEmployeeCount();
 
@@ -253,6 +238,21 @@
 
     // Gọi hàm này sau khi thêm hoặc xóa món
     updateDish();
+
+    // Tính doanh thu tháng
+    // Chuyển dữ liệu từ C# sang JavaScript
+    var doanhThuData = @Html.Raw(Json.Encode(ViewBag.DoanhThuData));
+
+    // Tìm tháng hiện tại
+    var date = new Date();
+    var currentMonth = date.getMonth() + 1; // JavaScript months are 0-based
+
+    // Tìm doanh thu của tháng hiện tại
+    var currentMonthData = doanhThuData.find(item => item.Thang === currentMonth);
+    var currentMonthRevenue = currentMonthData ? currentMonthData.DoanhThu : 0;
+
+    // Cập nhật giao diện với dữ liệu mới
+    $(".text-dark.mb-1").text(currentMonthRevenue);
 </script>
 
 <script src="~/Areas/Admin/Assets/assets/libs/jquery/dist/jquery.min.js"></script>

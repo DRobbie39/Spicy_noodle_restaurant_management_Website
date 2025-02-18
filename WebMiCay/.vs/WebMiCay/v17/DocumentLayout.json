@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84DF5BDE-C62E-40B8-99C7-32AEB6DC9A1D}|WebMiCay\\WebMiCay.csproj|d:\\study\\hk1 2023-2024\\btl_pttkht\\spicy_noodle_restaurant_management_website\\webmicay\\webmicay\\areas\\admin\\views\\homead\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84DF5BDE-C62E-40B8-99C7-32AEB6DC9A1D}|WebMiCay\\WebMiCay.csproj|solutionrelative:webmicay\\areas\\admin\\views\\homead\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84DF5BDE-C62E-40B8-99C7-32AEB6DC9A1D}|WebMiCay\\WebMiCay.csproj|d:\\study\\hk1 2023-2024\\btl_pttkht\\spicy_noodle_restaurant_management_website\\webmicay\\webmicay\\areas\\admin\\controllers\\homeadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84DF5BDE-C62E-40B8-99C7-32AEB6DC9A1D}|WebMiCay\\WebMiCay.csproj|solutionrelative:webmicay\\areas\\admin\\controllers\\homeadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeADController.cs",
+              "DocumentMoniker": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\WebMiCay\\Areas\\Admin\\Controllers\\HomeADController.cs",
+              "RelativeDocumentMoniker": "WebMiCay\\Areas\\Admin\\Controllers\\HomeADController.cs",
+              "ToolTip": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\WebMiCay\\Areas\\Admin\\Controllers\\HomeADController.cs",
+              "RelativeToolTip": "WebMiCay\\Areas\\Admin\\Controllers\\HomeADController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAqwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T05:09:55.848Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -54,6 +76,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\WebMiCay\\Areas\\Admin\\Views\\HomeAD\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebMiCay\\Areas\\Admin\\Views\\HomeAD\\Index.cshtml",
+              "ToolTip": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\WebMiCay\\Areas\\Admin\\Views\\HomeAD\\Index.cshtml",
+              "RelativeToolTip": "WebMiCay\\Areas\\Admin\\Views\\HomeAD\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T05:06:29.155Z",
+              "EditorCaption": ""
             }
           ]
         }
