@@ -1,6 +1,6 @@
-# Spicy noodle restaurant management website (ASP .NET MVC, C#, SQL Server)
+# Spicy noodle restaurant management website (C#, ASP .NET MVC, SQL Server)
 
-* Group information:
+* Group information
   
     * Phan Gia Đạt
     * Phạm Đình Minh Trí
