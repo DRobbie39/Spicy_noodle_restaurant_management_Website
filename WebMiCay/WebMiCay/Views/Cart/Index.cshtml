@@ -39,7 +39,7 @@
                                 <td class="align-middle">
                                     <img src="~/Content/food_img/@item.AnhMon" alt="" style="width: 50px;"> @item.TenMon
                                 </td>
-                                <td class="align-middle">@item.GiaCa VNĐ</td>
+                                <td class="align-middle">@($"{item.GiaCa:N0} đ")</td>
                                 <td class="align-middle">
                                     <div class="input-group quantity mx-auto" style="width: 100px;">
                                         <div class="input-group-btn">
@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="align-middle">@(item.GiaCa * 1) VNĐ</td>
+                                <td class="align-middle">@( $"{(item.GiaCa * 1):N0}" ) VNĐ</td>
                                 <td class="align-middle">
                                     <button class="btn btn-sm btn-danger btn-remove-from-cart" data-item-id="@item.MaMon"><i class="fa fa-times"></i></button>
                                 </td>
@@ -70,7 +70,7 @@
                     <div class="pt-2">
                         <div id="totalAmount" class="d-flex justify-content-between mt-2">
                             <h5>Tổng cộng</h5>
-                            <h5>@Model.Sum(item => item.GiaCa * 1) VNĐ</h5>
+                            <h5>@($"{Model.Sum(item => item.GiaCa * 1):N0} VNĐ")</h5>
                         </div>
                         <a id="checkoutButton" class="btn btn-block btn-primary font-weight-bold my-3 py-3" href="/Cart/Checkout">Thanh toán</a>
                     </div>
@@ -132,7 +132,6 @@
 
             // Sự kiện khi ấn nút thanh toán
             $('#checkoutButton').on('click', function (e) {
-                // Kiểm tra tổng số lượng, nếu không đồng ý thanh toán, không thực hiện hành động tiếp theo
                 var totalQuantity = 0;
                 $('.quantity-input').each(function () {
                     totalQuantity += parseInt($(this).val());
@@ -143,14 +142,13 @@
                 }
             });
 
-            // Hàm kiểm tra số lượng và làm mờ/nhìn thấy nút thanh toán
+            // Hàm kiểm tra số lượng và làm mờ/hiện nút thanh toán
             function checkQuantityAndToggleCheckoutButton() {
                 var totalQuantity = 0;
                 $('.quantity-input').each(function () {
                     totalQuantity += parseInt($(this).val());
                 });
 
-                // Nếu tổng số lượng là 0, làm mờ nút thanh toán, ngược lại nhìn thấy nút thanh toán
                 if (totalQuantity === 0) {
                     $('#checkoutButton').addClass('muted');
                 } else {
@@ -163,12 +161,14 @@
 
             // Hàm cập nhật giỏ hàng
             function updateCartItem(row) {
-                var pricePerItem = parseFloat(row.find('.align-middle:eq(1)').text().replace(' VNĐ', ''));
+                var priceText = row.find('.align-middle:eq(1)').text().trim();
+                var pricePerItem = parseFloat(priceText.replace(/\./g, '').replace(' VNĐ', '')); // Loại bỏ dấu chấm ngăn cách ngàn
+
                 var quantity = parseInt(row.find('.quantity-input').val(), 10);
                 var totalPrice = pricePerItem * quantity;
 
                 // Cập nhật giá tiền món
-                row.find('.align-middle:eq(3)').text(totalPrice.toFixed(0) + ' VNĐ');
+                row.find('.align-middle:eq(3)').text(formatCurrency(totalPrice));
 
                 // Cập nhật tổng cộng
                 updateTotal();
@@ -176,8 +176,6 @@
                 // Cập nhật số lượng món trong session
                 var MaMon = row.find('.btn-remove-from-cart').data('item-id');
                 updateQuantityInSession(MaMon, quantity);
-
-                console.log('Quantity of ' + MaMon + ': ' + quantity);
             }
 
             // Hàm cập nhật số lượng món trong session
@@ -190,21 +188,26 @@
                         SoLuongMon: quantity
                     }
                 });
-            }   
+            }
 
             // Hàm cập nhật tổng cộng
             function updateTotal() {
                 var total = 0;
                 $('tbody .align-middle:eq(3)').each(function () {
-                    var valueText = $(this).text().trim().replace(' VNĐ', '');
-                    var value = parseFloat(valueText);
+                    var valueText = $(this).text().trim();
+                    var value = parseFloat(valueText.replace(/\./g, '').replace(' VNĐ', ''));
                     if (!isNaN(value)) {
                         total += value;
                     }
                 });
 
                 // Cập nhật tổng cộng
-                $('#totalAmount h5:last').text(total.toFixed(0) + ' VNĐ');
+                $('#totalAmount h5:last').text(formatCurrency(total));
+            }
+
+            // Hàm định dạng tiền VND (dấu chấm phân cách ngàn)
+            function formatCurrency(value) {
+                return value.toLocaleString('vi-VN') + ' VNĐ';
             }
         });
     </script>

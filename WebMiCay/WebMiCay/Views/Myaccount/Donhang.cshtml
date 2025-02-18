@@ -63,7 +63,7 @@
                                             {
                                                 var itemTotal = Convert.ToDecimal(detail.Mon.GiaCa * detail.SoLuongMon);
                                                 // N2 để lấy 2 số sau dấu phẩy
-                                                <h6 class="font-weight-medium">@itemTotal.ToString("N2")</h6>
+                                                <h6 class="font-weight-medium">@($"{itemTotal:N0} đ")</h6>
                                             }
 
                                         </div>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="d-flex justify-content-between mt-2">
                                     <h5>Tổng cộng: </h5>
-                                    <h5>@order.TongGia</h5>
+                                    <h5>@($"{order.TongGia:N0} đ")</h5>
                                 </div>
                                 <!-- Thêm nút Hủy đơn -->
                                 <button class="btn btn-danger" onclick="confirmDelete('@order.MaHD')">Hủy đơn</button>

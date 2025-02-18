@@ -147,7 +147,6 @@
     <Compile Include="Areas\Admin\Models\IngredientViewModel.cs" />
     <Compile Include="Areas\Admin\Models\ProviderViewModel.cs" />
     <Compile Include="Areas\Admin\Models\StaffViewModel.cs" />
-    <Compile Include="Areas\Staff\StaffAreaRegistration.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
@@ -990,7 +989,6 @@
     <Content Include="Areas\Admin\Assets\dist\css\icons\themify-icons\fonts\themify.ttf" />
     <Content Include="Areas\Admin\Assets\dist\css\icons\themify-icons\fonts\themify.woff" />
     <Content Include="Areas\Admin\Assets\dist\css\icons\themify-icons\themify-icons.less" />
-    <Content Include="Areas\Staff\Views\web.config" />
     <Content Include="Areas\Admin\Views\HomeAD\Login.cshtml" />
     <Content Include="Areas\Admin\Views\Bill\Index.cshtml" />
     <Content Include="Areas\Admin\Views\BookAD\Index.cshtml" />
@@ -1092,9 +1090,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Default\" />
-    <Folder Include="Areas\Staff\Controllers\" />
-    <Folder Include="Areas\Staff\Models\" />
-    <Folder Include="Areas\Staff\Views\Shared\" />
     <Folder Include="Client\lib\owlcarousel\assets\" />
   </ItemGroup>
   <ItemGroup>

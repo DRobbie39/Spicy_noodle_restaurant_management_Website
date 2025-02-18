@@ -56,8 +56,8 @@
                                         <tr>
                                             <td>@chiTietMon.TenMon</td>
                                             <td>@chiTietMon.SoLuongMon</td>
-                                            <td>@chiTietMon.GiaMon</td>
-                                            <td>@(chiTietMon.GiaMon * chiTietMon.SoLuongMon)</td>
+                                            <td>@($"{chiTietMon.GiaMon:N0} đ")</td>
+                                            <td>@($"{chiTietMon.GiaMon * chiTietMon.SoLuongMon:N0} đ")</td>
                                         </tr>
                                     }
                                 </tbody>
@@ -67,7 +67,7 @@
                         <ul class="bxx">
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm" style="font-weight: bold; color: #2a00ff">
                                 <strong class="text-dark">Tổng hóa đơn:</strong> &nbsp;
-                                @Model.TongGia
+                                @($"{Model.TongGia:N0} đ")
                             </li>
                         </ul>
                         

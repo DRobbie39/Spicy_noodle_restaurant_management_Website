@@ -62,7 +62,7 @@
                                                     <a href="javascript:void(0)" class="font-weight-medium link">@item.TenKH</a>
                                                 </td>
                                                 <td>@item.MaHD</td>
-                                                <td><a href="javascript:void(0)" class="font-bold link">@item.TongGia</a></td>
+                                                <td><a href="javascript:void(0)" class="font-bold link">@($"{item.TongGia:N0} đ")</a></td>
                                                 <td>@item.NgayDat</td>
                                                 <td>@(employee != null ? employee.MaNV : "N/A")</td>
                                                 <td class="bx-tx">
