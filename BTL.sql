@@ -563,7 +563,6 @@ ALTER COLUMN GiaCa decimal(10, 2);
 DELETE FROM PhanHoi
 SELECT * FROM PhanHoi
 
-
 -- Tạo bảng lưu tổng doanh thu theo tháng
 CREATE TABLE TongDoanhThuTheoThang (
 	ID INT PRIMARY KEY IDENTITY(1,1),

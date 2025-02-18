@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84DF5BDE-C62E-40B8-99C7-32AEB6DC9A1D}|WebMiCay\\WebMiCay.csproj|d:\\study\\hk1 2023-2024\\btl_pttkht\\spicy_noodle_restaurant_management_website\\webmicay\\webmicay\\views\\myaccount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84DF5BDE-C62E-40B8-99C7-32AEB6DC9A1D}|WebMiCay\\WebMiCay.csproj|solutionrelative:webmicay\\views\\myaccount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\WebMiCay\\Views\\Myaccount\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebMiCay\\Views\\Myaccount\\Index.cshtml",
+              "ToolTip": "D:\\Study\\HK1 2023-2024\\BTL_PTTKHT\\Spicy_noodle_restaurant_management_Website\\WebMiCay\\WebMiCay\\Views\\Myaccount\\Index.cshtml",
+              "RelativeToolTip": "WebMiCay\\Views\\Myaccount\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T04:15:27.845Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -22,10 +40,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
               "$type": "Bookmark",

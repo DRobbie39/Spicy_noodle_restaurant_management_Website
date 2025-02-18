@@ -24,9 +24,13 @@
         <div>
             <p>
                 Xin chào
-                <strong>@user.TenKH</strong>, <strong>SĐT: @user.SDT</strong>, <strong>Ngày sinh: @user.NgaySinh.ToString("dd/MM/yyyy")</strong>,
-                <strong>Địa chỉ: @user.DiaChi</strong>, <strong>Giới tính: @user.GioiTinh</strong>,
-                <strong>Tên tài khoản: @user.TenTaiKhoanKhach</strong>, <strong>Mật khẩu: @user.MatKhauKhach</strong>
+                <strong>@(user?.TenKH ?? "Khách hàng")</strong>,
+                <strong>SĐT: @(user?.SDT ?? "Không có SĐT")</strong>,
+                <strong>Ngày sinh: @(user?.NgaySinh.ToString("dd/MM/yyyy") ?? "Không có ngày sinh")</strong>,
+                <strong>Địa chỉ: @(user?.DiaChi ?? "Không có địa chỉ")</strong>,
+                <strong>Giới tính: @(user?.GioiTinh ?? "Không xác định")</strong>,
+                <strong>Tên tài khoản: @(user?.TenTaiKhoanKhach ?? "Không có tài khoản")</strong>,
+                <strong>Mật khẩu: @(user?.MatKhauKhach ?? "Không có mật khẩu")</strong>
                 (không phải tài khoản này? Hãy
                 <a href="~/Myaccount/Logout">thoát ra</a>
                 và đăng nhập lại vào tài khoản của bạn)
